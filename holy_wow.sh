@@ -264,7 +264,8 @@ rm hashlists.php
 for (( i=$StartPoint; i<=$StopPoint; i++ ))
 do
    clear
-   echo "Sleeping 1 second... (hashlistId = $i)"
+   timer
+   echo "Sleeping 1 second... (hashlistId = $i of $StopPoint)"
    sleep 1
    clear
    timer
@@ -295,5 +296,5 @@ sort holy_wow.txt | uniq
 # Stop timer and display
 timer
 
-echo "Total unique passwords in holy_wow: $(cat holy_wow.txt | wc -l )"
+echo "Total unique passwords in holy_wow: $(wc -l < holy_wow.txt)"
 
