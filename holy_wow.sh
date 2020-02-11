@@ -60,6 +60,16 @@ touch holy_wow.txt
 SECONDS=0
 
 
+
+### Start with hashcat's example.dict on their githib
+### https://github.com/hashcat/hashcat
+curl https://raw.githubusercontent.com/hashcat/hashcat/master/example.dict
+cat example.dict >> holy_wow.txt
+rm example.dict
+clear
+timer
+
+
 ### Get all lists from Dan Miessler's github
 ### https://github.com/danielmiessler/SecLists/tree/master/Passwords
 
