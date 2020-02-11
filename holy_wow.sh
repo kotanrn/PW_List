@@ -28,6 +28,7 @@
 
 
 
+# clear; while true; do clear; ls -lha; sleep
 
 # Create a function to display time elapsed
 timer () {
@@ -139,6 +140,20 @@ rm xato-net-10-million-passwords.txt
 clear
 timer
 
+
+### I'm not a big fan of this "dictionary". It looks a lot like someone took rockyou and websters,
+### applied base64.rule to it and saved it as a text file. Uncomment if you want to include it.
+
+# md5decrypt dictionary
+# https://md5decrypt.net/en/Password-cracking-wordlist-download/_Downloads_/wordlist-download.php
+
+#wget -O Md5decrypt-awesome-wordlist.7z --user-agent="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0" --keep-session-cookies --save-cookies cookies.txt --post-data --header="Host: somewebsite.com" --header="Referer: https://md5decrypt.net/en/Password-cracking-wordlist-download/_Downloads_/wordlist-download.php" "http://md5decrypt.net/Telecharger-wordlist/Md5decrypt-awesome-wordlist.7z"
+#7za e Md5decrypt-awesome-wordlist.7z
+#rm Md5decrypt-awesome-wordlist.7z
+#cat Md5decrypt-awesome-wordlist.txt >> holy_wow.txt
+#rm Md5decrypt-awesome-wordlist.txt
+#clear
+#timer
 
 
 ### Get a bunch of lists from Skull Security
@@ -254,7 +269,7 @@ timer
 # Set the start point
 StartPoint=1
 
-# Get StopPoint from https://hashes.org/hashlists.php and store as StopPoint
+# Get StopPoint from  5 and store as StopPoint
 rm hashlists.php
 curl -O https://hashes.org/hashlists.php
 read StopPoint <<< $(sed 's/[^0-9]//g' <<< $(grep -m 1 td hashlists.php))
