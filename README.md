@@ -10,9 +10,13 @@ https://www.youtube.com/watch?v=7A9siTT_A6I
 
 
 Last run data:
+
 Sat, 15 Feb 2020
-Timer: 11 hour(s), 36 minute(s) and 26 second(s)
+
+Elapsed time including sort | uniq: 11 hour(s), 36 minute(s) and 26 second(s)
+
 Total files downloaded: 37
+
 Total unique passwords in holy_wow: 2517311333
 
 
