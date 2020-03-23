@@ -5,11 +5,11 @@ and combine a bunch of wordlists in to holy_wow.txt
 
 
 Inspired by _NSAKey's talk at BSides Nashville 2015: 
-
 https://www.youtube.com/watch?v=7A9siTT_A6I 
 
 
-Last run data:
+
+*** Last run data:
 
 Sun, 22 Mar 2020
 
