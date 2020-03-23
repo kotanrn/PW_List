@@ -22,5 +22,5 @@ Total unique passwords in holy_wow: 2,323,137,771
 
 
 
-It takes about 14 minutes to base64.rule all of them against plain md5
+It takes about 7 minutes to base64.rule all of them against plain md5
 on my machine (~ 448M guesses per second).
