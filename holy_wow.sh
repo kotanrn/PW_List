@@ -21,6 +21,11 @@
 
 
 
+### One liner to watch the file grow
+# while true; do clear; ls -lha | grep -i holy; sleep 10; done
+
+
+
 # XXXXX
 #wget -O XXXXX --max-redirect=0 --user-agent="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0" --keep-session-cookies --save-cookies cookies.txt --post-data --header="Host: somewebsite.com" --header="Referer: https://google.com" "XXXXX"
 #bzip2 -dk xxxxx
@@ -54,6 +59,12 @@ echo "Total files downloaded: $dlFiles"
 }
 
 
+# Create a function to sort -u holy_wow.txt
+hwSort () {
+echo "Sorting round $dlFiles"
+sort -u -o holy_wow.txt holy_wow.txt
+}
+
 # Make a directory titled holy_wow so we don't accidentally clutter up something like the desktop
 mkdir holy_wow
 cd holy_wow
@@ -63,9 +74,13 @@ cd holy_wow
 touch holy_wow.txt
 
 
+# Clear the screen
+clear
+
+
 # Start the timer
 SECONDS=0
-
+timer
 
 
 
@@ -75,6 +90,7 @@ curl -O https://raw.githubusercontent.com/hashcat/hashcat/master/example.dict
 cat example.dict >> holy_wow.txt
 rm example.dict
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -87,14 +103,17 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat twitter-banned.txt >> holy_wow.txt
 rm twitter-banned.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 clear
+
 # probable-v2-top12000.txt
 curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/probable-v2-top12000.txt
 cat probable-v2-top12000.txt >> holy_wow.txt
 rm probable-v2-top12000.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -103,6 +122,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat openwall.net-all.txt >> holy_wow.txt
 rm openwall.net-all.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -111,6 +131,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat mssql-passwords-nansh0u-guardicore.txt >> holy_wow.txt
 rm mssql-passwords-nansh0u-guardicore.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -119,6 +140,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat dutch_wordlist >> holy_wow.txt
 rm dutch_wordlist
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -127,6 +149,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat darkweb2017-top10000.txt >> holy_wow.txt
 rm darkweb2017-top10000.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -135,6 +158,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat bt4-password.txt >> holy_wow.txt
 rm bt4-password.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -143,6 +167,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat PHP-Magic-Hashes.txt >> holy_wow.txt
 rm PHP-Magic-Hashes.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -151,6 +176,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat Most-Popular-Letter-Passes.txt >> holy_wow.txt
 rm Most-Popular-Letter-Passes.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -159,6 +185,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat Keyboard-Combinations.txt >> holy_wow.txt
 rm Keyboard-Combinations.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -167,6 +194,7 @@ curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwor
 cat xato-net-10-million-passwords.txt >> holy_wow.txt
 rm xato-net-10-million-passwords.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -197,6 +225,7 @@ rm rockyou.txt.bz2
 cat rockyou.txt >> holy_wow.txt
 rm rockyou.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -208,6 +237,7 @@ rm myspace.txt.bz2
 cat myspace.txt >> holy_wow.txt
 rm myspace.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -218,6 +248,7 @@ rm crackstation.txt.gz
 cat realuniq.lst >> holy_wow.txt
 rm realuniq.lst
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -228,6 +259,7 @@ rm john.txt.bz2
 cat john.txt >> holy_wow.txt
 rm john.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -238,6 +270,7 @@ rm cain.txt.bz2
 cat cain.txt >> holy_wow.txt
 rm cain.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -248,6 +281,7 @@ rm conficker.txt.bz2
 cat conficker.txt >> holy_wow.txt
 rm conficker.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -258,6 +292,7 @@ rm phpbb.txt.bz2
 cat phpbb.txt >> holy_wow.txt
 rm phpbb.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -268,6 +303,7 @@ rm hotmail.txt.bz2
 cat hotmail.txt >> holy_wow.txt
 rm hotmail.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -278,6 +314,7 @@ rm faithwriters.txt.bz2
 cat faithwriters.txt >> holy_wow.txt
 rm faithwriters.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -288,6 +325,7 @@ rm elitehacker.txt.bz2
 cat elitehacker.txt >> holy_wow.txt
 rm elitehacker.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -298,6 +336,7 @@ rm hak5.txt.bz2
 cat hak5.txt >> holy_wow.txt
 rm hak5.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -306,6 +345,7 @@ wget -O big.txt "https://raw.githubusercontent.com/digination/dirbuster-ng/maste
 cat big.txt >> holy_wow.txt
 rm big.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -314,6 +354,7 @@ wget -O Euskera.txt "https://raw.githubusercontent.com/digination/dirbuster-ng/m
 cat Euskera.txt >> holy_wow.txt
 rm Euskera.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -322,6 +363,7 @@ wget -O Catala.txt "https://github.com/digination/dirbuster-ng/blob/master/wordl
 cat Catala.txt >> holy_wow.txt
 rm Catala.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -330,6 +372,7 @@ wget -O FastTrack.txt "https://raw.githubusercontent.com/trustedsec/social-engin
 cat FastTrack.txt >> holy_wow.txt
 rm FastTrack.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -338,6 +381,7 @@ wget -O Fern.txt "https://raw.githubusercontent.com/savio-code/fern-wifi-cracker
 cat Fern.txt >> holy_wow.txt
 rm Fern.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -351,6 +395,7 @@ wget -O test_ext.txt "https://raw.githubusercontent.com/xmendez/wfuzz/master/wor
 cat test_ext.txt >> holy_wow.txt
 rm test_ext.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -359,6 +404,7 @@ wget -O common_pass.txt "https://raw.githubusercontent.com/xmendez/wfuzz/master/
 cat common_pass.txt >> holy_wow.txt
 rm common_pass.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -367,6 +413,7 @@ wget -O names.txt "https://raw.githubusercontent.com/xmendez/wfuzz/master/wordli
 cat names.txt >> holy_wow.txt
 rm names.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -375,6 +422,7 @@ wget -O megabeast.txt "https://raw.githubusercontent.com/xmendez/wfuzz/master/wo
 cat megabeast.txt >> holy_wow.txt
 rm megabeast.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -383,6 +431,7 @@ wget -O spanish.txt "https://raw.githubusercontent.com/xmendez/wfuzz/master/word
 cat spanish.txt >> holy_wow.txt
 rm spanish.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -396,6 +445,7 @@ sed -i '/#!comment/d' ./passwords.lst   ### Remove comments
 cat passwords.lst >> holy_wow.txt
 rm passwords.lst
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -404,6 +454,7 @@ wget -O vhosts-full.lst "https://raw.githubusercontent.com/nmap/nmap/master/nsel
 cat vhosts-full.lst >> holy_wow.txt
 rm vhosts-full.lst
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -418,6 +469,7 @@ rm hashes.org-2012-2019.7z
 cat hashes.org-2012-2019.txt >> holy_wow.txt
 rm hashes.org-2012-2019.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -428,6 +480,7 @@ rm hashes.org-2020.7z
 cat hashes.org-2020.txt >> holy_wow.txt
 rm hashes.org-2020.txt
 dlFiles=$((dlFiles+1))
+hwSort
 clear
 timer
 
@@ -479,10 +532,6 @@ timer
 ### Remove cookies.txt
 rm cookies.txt
 
-
-
-### Sort and uniq everything in holy_wow.txt
-sort holy_wow.txt | uniq
 
 
 
