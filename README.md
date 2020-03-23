@@ -11,13 +11,13 @@ https://www.youtube.com/watch?v=7A9siTT_A6I
 
 Last run data:
 
-Sat, 15 Feb 2020
+Sun, 22 Mar 2020
 
-Elapsed time including sort | uniq: 11 hour(s), 36 minute(s) and 26 second(s)
+Elapsed time: 21 hour(s), 28 minute(s) and 34 second(s)
 
 Total files downloaded: 37
 
-Total unique passwords in holy_wow: 2517311333
+Total unique passwords in holy_wow: 2,323,137,771
 
 
 
